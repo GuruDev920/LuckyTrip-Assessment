@@ -2,7 +2,7 @@
 //  LuckyTripUITestsLaunchTests.swift
 //  LuckyTripUITests
 //
-//  Created by Sun on 2022/8/9.
+//  Created by Li on 2022/8/9.
 //
 
 import XCTest

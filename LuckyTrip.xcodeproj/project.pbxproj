@@ -12,13 +12,16 @@
 		9251E0AC135CE3C21F4CC6BF /* Pods_LuckyTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528E32E72CDC1595D75CC434 /* Pods_LuckyTrip.framework */; };
 		A4ECF65528A2A0AD002296E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF65428A2A0AD002296E6 /* AppDelegate.swift */; };
 		A4ECF65728A2A0AD002296E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF65628A2A0AD002296E6 /* SceneDelegate.swift */; };
-		A4ECF65928A2A0AD002296E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF65828A2A0AD002296E6 /* ViewController.swift */; };
-		A4ECF65C28A2A0AD002296E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF65A28A2A0AD002296E6 /* Main.storyboard */; };
 		A4ECF65E28A2A0AE002296E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF65D28A2A0AE002296E6 /* Assets.xcassets */; };
-		A4ECF66128A2A0AE002296E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF65F28A2A0AE002296E6 /* LaunchScreen.storyboard */; };
 		A4ECF66C28A2A0AF002296E6 /* LuckyTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF66B28A2A0AF002296E6 /* LuckyTripTests.swift */; };
 		A4ECF67628A2A0AF002296E6 /* LuckyTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF67528A2A0AF002296E6 /* LuckyTripUITests.swift */; };
 		A4ECF67828A2A0AF002296E6 /* LuckyTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF67728A2A0AF002296E6 /* LuckyTripUITestsLaunchTests.swift */; };
+		A4ECF68C28A2A1D6002296E6 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF68B28A2A1D6002296E6 /* Launch.storyboard */; };
+		A4ECF68E28A2A1E3002296E6 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF68D28A2A1E3002296E6 /* LaunchVC.swift */; };
+		A4ECF69228A2A261002296E6 /* PickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69028A2A261002296E6 /* PickerVC.swift */; };
+		A4ECF69328A2A261002296E6 /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF69128A2A261002296E6 /* PickerVC.xib */; };
+		A4ECF69528A2A272002296E6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69428A2A272002296E6 /* ApiRequest.swift */; };
+		A4ECF69728A2A279002296E6 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69628A2A279002296E6 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,16 +51,19 @@
 		A4ECF65128A2A0AD002296E6 /* LuckyTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ECF65428A2A0AD002296E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4ECF65628A2A0AD002296E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4ECF65828A2A0AD002296E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A4ECF65B28A2A0AD002296E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4ECF65D28A2A0AE002296E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A4ECF66028A2A0AE002296E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4ECF66228A2A0AE002296E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4ECF66728A2A0AF002296E6 /* LuckyTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ECF66B28A2A0AF002296E6 /* LuckyTripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyTripTests.swift; sourceTree = "<group>"; };
 		A4ECF67128A2A0AF002296E6 /* LuckyTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ECF67528A2A0AF002296E6 /* LuckyTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyTripUITests.swift; sourceTree = "<group>"; };
 		A4ECF67728A2A0AF002296E6 /* LuckyTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4ECF68B28A2A1D6002296E6 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		A4ECF68D28A2A1E3002296E6 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
+		A4ECF69028A2A261002296E6 /* PickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerVC.swift; sourceTree = "<group>"; };
+		A4ECF69128A2A261002296E6 /* PickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
+		A4ECF69428A2A272002296E6 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		A4ECF69628A2A279002296E6 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		B493DB929709F94DE927D269 /* Pods-LuckyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTripTests.release.xcconfig"; path = "Target Support Files/Pods-LuckyTripTests/Pods-LuckyTripTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE6B64D08DA639EAA8DB19FA /* Pods-LuckyTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.release.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.release.xcconfig"; sourceTree = "<group>"; };
 		EA906D634AA028AADE52B9AC /* Pods-LuckyTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.debug.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +117,6 @@
 				30D31DE105DC4C22D7B4C826 /* Pods-LuckyTripTests.debug.xcconfig */,
 				B493DB929709F94DE927D269 /* Pods-LuckyTripTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,12 +145,8 @@
 		A4ECF65328A2A0AD002296E6 /* LuckyTrip */ = {
 			isa = PBXGroup;
 			children = (
-				A4ECF65428A2A0AD002296E6 /* AppDelegate.swift */,
-				A4ECF65628A2A0AD002296E6 /* SceneDelegate.swift */,
-				A4ECF65828A2A0AD002296E6 /* ViewController.swift */,
-				A4ECF65A28A2A0AD002296E6 /* Main.storyboard */,
-				A4ECF65D28A2A0AE002296E6 /* Assets.xcassets */,
-				A4ECF65F28A2A0AE002296E6 /* LaunchScreen.storyboard */,
+				A4ECF68428A2A177002296E6 /* Utility */,
+				A4ECF68828A2A197002296E6 /* Controller */,
 				A4ECF66228A2A0AE002296E6 /* Info.plist */,
 			);
 			path = LuckyTrip;
@@ -166,6 +167,69 @@
 				A4ECF67728A2A0AF002296E6 /* LuckyTripUITestsLaunchTests.swift */,
 			);
 			path = LuckyTripUITests;
+			sourceTree = "<group>";
+		};
+		A4ECF68428A2A177002296E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF68528A2A17C002296E6 /* Delegate */,
+				A4ECF68628A2A185002296E6 /* Service */,
+				A4ECF68928A2A1AA002296E6 /* Resource */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A4ECF68528A2A17C002296E6 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF65428A2A0AD002296E6 /* AppDelegate.swift */,
+				A4ECF65628A2A0AD002296E6 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A4ECF68628A2A185002296E6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69628A2A279002296E6 /* Services.swift */,
+				A4ECF69428A2A272002296E6 /* ApiRequest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A4ECF68828A2A197002296E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF68A28A2A1C5002296E6 /* Launch */,
+				A4ECF68F28A2A239002296E6 /* Picker */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4ECF68928A2A1AA002296E6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF65D28A2A0AE002296E6 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A4ECF68A28A2A1C5002296E6 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF68B28A2A1D6002296E6 /* Launch.storyboard */,
+				A4ECF68D28A2A1E3002296E6 /* LaunchVC.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		A4ECF68F28A2A239002296E6 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69028A2A261002296E6 /* PickerVC.swift */,
+				A4ECF69128A2A261002296E6 /* PickerVC.xib */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4ECF66128A2A0AE002296E6 /* LaunchScreen.storyboard in Resources */,
+				A4ECF69328A2A261002296E6 /* PickerVC.xib in Resources */,
 				A4ECF65E28A2A0AE002296E6 /* Assets.xcassets in Resources */,
-				A4ECF65C28A2A0AD002296E6 /* Main.storyboard in Resources */,
+				A4ECF68C28A2A1D6002296E6 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +471,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4ECF65928A2A0AD002296E6 /* ViewController.swift in Sources */,
+				A4ECF69228A2A261002296E6 /* PickerVC.swift in Sources */,
+				A4ECF69728A2A279002296E6 /* Services.swift in Sources */,
+				A4ECF68E28A2A1E3002296E6 /* LaunchVC.swift in Sources */,
 				A4ECF65528A2A0AD002296E6 /* AppDelegate.swift in Sources */,
+				A4ECF69528A2A272002296E6 /* ApiRequest.swift in Sources */,
 				A4ECF65728A2A0AD002296E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,25 +511,6 @@
 			targetProxy = A4ECF67228A2A0AF002296E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A4ECF65A28A2A0AD002296E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4ECF65B28A2A0AD002296E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A4ECF65F28A2A0AE002296E6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4ECF66028A2A0AE002296E6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A4ECF67928A2A0AF002296E6 /* Debug */ = {
@@ -590,8 +638,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuckyTrip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
+				INFOPLIST_KEY_UIMainStoryboardFile = Launch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,8 +666,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuckyTrip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
+				INFOPLIST_KEY_UIMainStoryboardFile = Launch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

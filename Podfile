@@ -6,7 +6,10 @@ target 'LuckyTrip' do
   use_frameworks!
 
   # Pods for LuckyTrip
+  pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
+  pod 'ReachabilitySwift'
 
   target 'LuckyTripTests' do
     inherit! :search_paths
