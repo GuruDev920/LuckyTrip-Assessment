@@ -22,6 +22,10 @@
 		A4ECF69328A2A261002296E6 /* PickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF69128A2A261002296E6 /* PickerVC.xib */; };
 		A4ECF69528A2A272002296E6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69428A2A272002296E6 /* ApiRequest.swift */; };
 		A4ECF69728A2A279002296E6 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69628A2A279002296E6 /* Services.swift */; };
+		A4ECF69A28A2A657002296E6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69928A2A657002296E6 /* Model.swift */; };
+		A4ECF6A028A2AAAB002296E6 /* DestinationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69E28A2AAAB002296E6 /* DestinationCell.swift */; };
+		A4ECF6A128A2AAAB002296E6 /* DestinationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF69F28A2AAAB002296E6 /* DestinationCell.xib */; };
+		A4ECF6A428A2AD8C002296E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF6A328A2AD8C002296E6 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		A4ECF69128A2A261002296E6 /* PickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerVC.xib; sourceTree = "<group>"; };
 		A4ECF69428A2A272002296E6 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		A4ECF69628A2A279002296E6 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		A4ECF69928A2A657002296E6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A4ECF69E28A2AAAB002296E6 /* DestinationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCell.swift; sourceTree = "<group>"; };
+		A4ECF69F28A2AAAB002296E6 /* DestinationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestinationCell.xib; sourceTree = "<group>"; };
+		A4ECF6A328A2AD8C002296E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B493DB929709F94DE927D269 /* Pods-LuckyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTripTests.release.xcconfig"; path = "Target Support Files/Pods-LuckyTripTests/Pods-LuckyTripTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE6B64D08DA639EAA8DB19FA /* Pods-LuckyTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.release.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.release.xcconfig"; sourceTree = "<group>"; };
 		EA906D634AA028AADE52B9AC /* Pods-LuckyTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.debug.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 			children = (
 				A4ECF68428A2A177002296E6 /* Utility */,
 				A4ECF68828A2A197002296E6 /* Controller */,
+				A4ECF69B28A2AA83002296E6 /* View */,
 				A4ECF66228A2A0AE002296E6 /* Info.plist */,
 			);
 			path = LuckyTrip;
@@ -173,7 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				A4ECF68528A2A17C002296E6 /* Delegate */,
+				A4ECF69828A2A64B002296E6 /* Model */,
 				A4ECF68628A2A185002296E6 /* Service */,
+				A4ECF6A228A2AD7F002296E6 /* Extension */,
 				A4ECF68928A2A1AA002296E6 /* Resource */,
 			);
 			path = Utility;
@@ -230,6 +241,47 @@
 				A4ECF69128A2A261002296E6 /* PickerVC.xib */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		A4ECF69828A2A64B002296E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69928A2A657002296E6 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4ECF69B28A2AA83002296E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69C28A2AA8C002296E6 /* UICollectionViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4ECF69C28A2AA8C002296E6 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69D28A2AA95002296E6 /* DestinationCell */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A4ECF69D28A2AA95002296E6 /* DestinationCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF69E28A2AAAB002296E6 /* DestinationCell.swift */,
+				A4ECF69F28A2AAAB002296E6 /* DestinationCell.xib */,
+			);
+			path = DestinationCell;
+			sourceTree = "<group>";
+		};
+		A4ECF6A228A2AD7F002296E6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF6A328A2AD8C002296E6 /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +395,7 @@
 			files = (
 				A4ECF69328A2A261002296E6 /* PickerVC.xib in Resources */,
 				A4ECF65E28A2A0AE002296E6 /* Assets.xcassets in Resources */,
+				A4ECF6A128A2AAAB002296E6 /* DestinationCell.xib in Resources */,
 				A4ECF68C28A2A1D6002296E6 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +524,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4ECF6A428A2AD8C002296E6 /* Extension.swift in Sources */,
+				A4ECF69A28A2A657002296E6 /* Model.swift in Sources */,
 				A4ECF69228A2A261002296E6 /* PickerVC.swift in Sources */,
+				A4ECF6A028A2AAAB002296E6 /* DestinationCell.swift in Sources */,
 				A4ECF69728A2A279002296E6 /* Services.swift in Sources */,
 				A4ECF68E28A2A1E3002296E6 /* LaunchVC.swift in Sources */,
 				A4ECF65528A2A0AD002296E6 /* AppDelegate.swift in Sources */,

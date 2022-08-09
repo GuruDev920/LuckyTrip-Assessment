@@ -6,11 +6,98 @@
 //
 
 import UIKit
+import AVKit
 
 class PickerVC: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var destinations = [Destination]()
+    private var selected = [Destination]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        init_data()
+        setupCollectionView()
+    }
+    
+    // MARK: - Play Video
+    func playVideo(_ videoUrl: String) {
+        guard let url = URL(string: videoUrl) else { return }
+        let player = AVPlayer(url: url)
+        let controller = AVPlayerViewController()
+        controller.player = player
+        present(controller, animated: true, completion: {
+            controller.player!.play()
+        })
+    }
+    
+    func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "DestinationCell", bundle: nil), forCellWithReuseIdentifier: "DestinationCell")
+        collectionView!.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    
+    func init_data() {
+        Services.getDestinations(type: .none, value: "") { (result, error) in
+            if error != nil {
+                return
+            }
+            self.destinations.removeAll()
+            for item in result!["destinations"].arrayValue {
+                self.destinations.append(Destination(item))
+            }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+}
+
+// MARK: - UICollectionView
+extension PickerVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return destinations.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DestinationCell", for: indexPath) as! DestinationCell
+        
+        let destination = destinations[indexPath.row]
+        cell.destination = destination
+        cell.select = selected.map({$0.id}).contains(destination.id)
+        cell.playAction = {
+            self.playVideo(destination.video)
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width-40, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let destination = destinations[indexPath.row]
+        if selected.map({$0.id}).contains(destination.id) {
+            selected = selected.filter{$0.id != destination.id}
+        } else {
+            if selected.count == 3 {
+                return
+            }
+            selected.append(destination)
+        }
+        collectionView.reloadItems(at: [indexPath])
     }
 }
