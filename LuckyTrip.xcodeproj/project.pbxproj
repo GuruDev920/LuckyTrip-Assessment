@@ -26,6 +26,8 @@
 		A4ECF6A028A2AAAB002296E6 /* DestinationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF69E28A2AAAB002296E6 /* DestinationCell.swift */; };
 		A4ECF6A128A2AAAB002296E6 /* DestinationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF69F28A2AAAB002296E6 /* DestinationCell.xib */; };
 		A4ECF6A428A2AD8C002296E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF6A328A2AD8C002296E6 /* Extension.swift */; };
+		A4ECF6A828A2C766002296E6 /* SelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECF6A628A2C766002296E6 /* SelectedVC.swift */; };
+		A4ECF6A928A2C766002296E6 /* SelectedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECF6A728A2C766002296E6 /* SelectedVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		A4ECF69E28A2AAAB002296E6 /* DestinationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCell.swift; sourceTree = "<group>"; };
 		A4ECF69F28A2AAAB002296E6 /* DestinationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestinationCell.xib; sourceTree = "<group>"; };
 		A4ECF6A328A2AD8C002296E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A4ECF6A628A2C766002296E6 /* SelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVC.swift; sourceTree = "<group>"; };
+		A4ECF6A728A2C766002296E6 /* SelectedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedVC.xib; sourceTree = "<group>"; };
 		B493DB929709F94DE927D269 /* Pods-LuckyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTripTests.release.xcconfig"; path = "Target Support Files/Pods-LuckyTripTests/Pods-LuckyTripTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE6B64D08DA639EAA8DB19FA /* Pods-LuckyTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.release.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.release.xcconfig"; sourceTree = "<group>"; };
 		EA906D634AA028AADE52B9AC /* Pods-LuckyTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyTrip.debug.xcconfig"; path = "Target Support Files/Pods-LuckyTrip/Pods-LuckyTrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			children = (
 				A4ECF68A28A2A1C5002296E6 /* Launch */,
 				A4ECF68F28A2A239002296E6 /* Picker */,
+				A4ECF6A528A2C741002296E6 /* Selected */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,6 +287,15 @@
 				A4ECF6A328A2AD8C002296E6 /* Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4ECF6A528A2C741002296E6 /* Selected */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECF6A628A2C766002296E6 /* SelectedVC.swift */,
+				A4ECF6A728A2C766002296E6 /* SelectedVC.xib */,
+			);
+			path = Selected;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +410,7 @@
 				A4ECF69328A2A261002296E6 /* PickerVC.xib in Resources */,
 				A4ECF65E28A2A0AE002296E6 /* Assets.xcassets in Resources */,
 				A4ECF6A128A2AAAB002296E6 /* DestinationCell.xib in Resources */,
+				A4ECF6A928A2C766002296E6 /* SelectedVC.xib in Resources */,
 				A4ECF68C28A2A1D6002296E6 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +544,7 @@
 				A4ECF69228A2A261002296E6 /* PickerVC.swift in Sources */,
 				A4ECF6A028A2AAAB002296E6 /* DestinationCell.swift in Sources */,
 				A4ECF69728A2A279002296E6 /* Services.swift in Sources */,
+				A4ECF6A828A2C766002296E6 /* SelectedVC.swift in Sources */,
 				A4ECF68E28A2A1E3002296E6 /* LaunchVC.swift in Sources */,
 				A4ECF65528A2A0AD002296E6 /* AppDelegate.swift in Sources */,
 				A4ECF69528A2A272002296E6 /* ApiRequest.swift in Sources */,

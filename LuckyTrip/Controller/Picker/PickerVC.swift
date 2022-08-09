@@ -80,7 +80,9 @@ class PickerVC: UIViewController {
     
     // MARK: - Save
     @IBAction func save_btn_click(_ sender: UIButton) {
-        
+        let vc = SelectedVC()
+        vc.destinations = self.selected
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - Sort
