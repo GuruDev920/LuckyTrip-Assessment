@@ -12,6 +12,18 @@ class LaunchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.pushViewController(PickerVC(), animated: true)
+        check_saved()
+    }
+    
+    func check_saved() {
+        let destinations = Destination.getSaved()
+        if destinations.count > 0 {
+            let vc = SelectedVC()
+            vc.isLaunch = true
+            vc.destinations = destinations
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            self.navigationController?.pushViewController(PickerVC(), animated: true)
+        }
     }
 }

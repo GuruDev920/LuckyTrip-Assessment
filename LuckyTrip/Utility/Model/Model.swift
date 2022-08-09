@@ -15,7 +15,7 @@ enum SearchType: String {
     case city_or_country = "city_or_country"
 }
 
-class Destination: NSObject {
+class Destination: Codable {
     var id = Int()
     var city = String()
     var country_name = String()
@@ -42,5 +42,20 @@ class Destination: NSObject {
         self.image = json["thumbnail"]["image_url"].stringValue
         self.video = json["destination_video"]["url"].stringValue
         self.descr = json["descr"].stringValue
+    }
+    
+    class func save(_ destinations: [Destination]) {
+        UserDefaults.standard.removeObject(forKey: "selected")
+        let data = try! JSONEncoder().encode(destinations)
+        UserDefaults.standard.set(data, forKey: "selected")
+    }
+    
+    class func getSaved() -> [Destination] {
+        let data = UserDefaults.standard.data(forKey: "selected")
+        if data == nil {
+            return []
+        }
+        let array = try! JSONDecoder().decode([Destination].self, from: data!)
+        return array
     }
 }
