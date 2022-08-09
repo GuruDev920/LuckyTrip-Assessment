@@ -11,16 +11,35 @@ import HCVimeoVideoExtractor
 
 class PickerVC: UIViewController {
 
+    @IBOutlet weak var country_sort_img: UIImageView!
+    @IBOutlet weak var city_sort_img: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var destinations = [Destination]()
     private var selected = [Destination]()
+    
+    private var country_sort = Bool()
+    private var city_sort = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         init_data()
         setupCollectionView()
+    }
+    
+    // MARK: - Sort
+    @IBAction func sort_btn_click(_ sender: UIButton) {
+        if sender.tag == 0 { // country
+            country_sort = !country_sort
+            country_sort_img.image = UIImage(systemName: country_sort ? "increase.indent" : "decrease.indent")
+            destinations = destinations.sorted{country_sort ? ($0.country_name < $1.country_name) : ($0.country_name > $1.country_name)}
+        } else {
+            city_sort = !city_sort
+            city_sort_img.image = UIImage(systemName: city_sort ? "increase.indent" : "decrease.indent")
+            destinations = destinations.sorted{city_sort ? ($0.city < $1.city) : ($0.city > $1.city)}
+        }
+        collectionView.reloadData()
     }
     
     // MARK: - Play Video
@@ -95,7 +114,7 @@ extension PickerVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width-40, height: 100)
+        return CGSize(width: collectionView.frame.width-40, height: 90)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -109,9 +128,6 @@ extension PickerVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         if selected.map({$0.id}).contains(destination.id) {
             selected = selected.filter{$0.id != destination.id}
         } else {
-            if selected.count == 3 {
-                return
-            }
             selected.append(destination)
         }
         collectionView.reloadItems(at: [indexPath])
