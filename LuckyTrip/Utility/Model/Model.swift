@@ -45,17 +45,21 @@ class Destination: Codable {
     }
     
     class func save(_ destinations: [Destination]) {
-        UserDefaults.standard.removeObject(forKey: "selected")
+        UserDefaults.standard.removeObject(forKey: Keys.selected)
         let data = try! JSONEncoder().encode(destinations)
-        UserDefaults.standard.set(data, forKey: "selected")
+        UserDefaults.standard.set(data, forKey: Keys.selected)
     }
     
     class func getSaved() -> [Destination] {
-        let data = UserDefaults.standard.data(forKey: "selected")
+        let data = UserDefaults.standard.data(forKey: Keys.selected)
         if data == nil {
             return []
         }
         let array = try! JSONDecoder().decode([Destination].self, from: data!)
         return array
     }
+}
+
+struct Keys {
+    static let selected = "selected"
 }
