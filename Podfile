@@ -10,6 +10,7 @@ target 'LuckyTrip' do
   pod 'SwiftyJSON'
   pod 'Kingfisher'
   pod 'ReachabilitySwift'
+  pod 'HCVimeoVideoExtractor'
 
   target 'LuckyTripTests' do
     inherit! :search_paths

@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import HCVimeoVideoExtractor
 
 class PickerVC: UIViewController {
 
@@ -25,11 +26,26 @@ class PickerVC: UIViewController {
     // MARK: - Play Video
     func playVideo(_ videoUrl: String) {
         guard let url = URL(string: videoUrl) else { return }
-        let player = AVPlayer(url: url)
-        let controller = AVPlayerViewController()
-        controller.player = player
-        present(controller, animated: true, completion: {
-            controller.player!.play()
+        
+        HCVimeoVideoExtractor.fetchVideoURLFrom(url: url, completion: { (video: HCVimeoVideo?, error:Error?) -> Void in
+            if let err = error {
+               print("Error = \(err.localizedDescription)")
+               return
+            }
+            guard let vid = video else {
+                print("Invalid video object")
+                return
+            }
+            print("Title = \(vid.title), url = \(vid.videoURL), thumbnail = \(vid.thumbnailURL)")
+            guard let videoURL = vid.videoURL[.Quality540p] else { return }
+            DispatchQueue.main.async {
+                let player = AVPlayer(url: videoURL)
+                let playerController = AVPlayerViewController()
+                playerController.player = player
+                self.present(playerController, animated: true) {
+                    player.play()
+                }
+            }
         })
     }
     

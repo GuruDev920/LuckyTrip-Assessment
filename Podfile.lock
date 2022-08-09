@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (5.6.1)
+  - HCVimeoVideoExtractor (0.0.1)
   - Kingfisher (7.2.1)
   - ReachabilitySwift (5.0.0)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - HCVimeoVideoExtractor
   - Kingfisher
   - ReachabilitySwift
   - SwiftyJSON
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - HCVimeoVideoExtractor
     - Kingfisher
     - ReachabilitySwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  HCVimeoVideoExtractor: d3c251280f7027ffd324266e1930b3618e0adb46
   Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: f209ed6cd415ee5f8aa616fac67d40b61b18c035
+PODFILE CHECKSUM: 43f54ca8b71ae9f2d9aa4a184498f5268d1b7531
 
 COCOAPODS: 1.11.3
