@@ -2,7 +2,7 @@
 //  SelectedVC.swift
 //  LuckyTrip
 //
-//  Created by Sun on 2022/8/10.
+//  Created by Li on 2022/8/10.
 //
 
 import UIKit
